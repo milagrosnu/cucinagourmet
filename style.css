@@ -52,27 +52,48 @@ a {
     display: flex;
     flex-direction: row;
     align-items: stretch;
+    justify-content: space-between;
     height: 200px;
-    margin-top: 30vw;
+    margin: 30vw 1vw auto 1vw;
 }
 
-.container-title {
-    background-color: var(--main-color);
+.title{
     font-family: var(--main-font);
     font-size: 3rem;
     color: var(--text-color);
-    width: 40vw;
-    justify-content: center;
+    text-align: center;
+    width:50%;
+    padding: 5%;
+    margin:auto;
+}
+
+.container-title2 {
+    width: 33%;
+    background-color: var(--main-color);
+
 }
 
 .container-info {
     font-family: var(--text-font);
-    display: flex;
-    font-size: 1.6vw;   
+    font-size: 1.3vw;   
+    width: 33%;
+    text-align: center;
 }
 
 .mail{
     color: var(--text-subcolor);
+    
+}
+
+.icons{
+    margin-top: 1vw;
+}
+
+.container-icons{
+    text-align: center;
+    font-size: 1.5vw;
+    width: 33%;
+    justify-content: space-around;
 }
 
 .dir{
@@ -86,7 +107,7 @@ a {
 }
 
 .icons{
-    font-size: 60px;
+    font-size: 40px;
     color: var(--text-subcolor);
 }
 
