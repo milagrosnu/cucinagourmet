@@ -113,6 +113,7 @@
 
 .contact {
     font-weight: bold;
+    font-family: var(--text-color);
 }
 
 /* SECCION CARTA */
@@ -213,3 +214,16 @@
 section{
     background-color: #FFF4F4;
 }
+
+/* SECCION FAQ */
+
+.container-FAQ{
+    padding: 3vw 0vw 0vw 2vw;
+    font-family: var(--text-font);
+    text-align: center;
+    font-size: 1.7rem;
+    background-color: #FFF4F4;
+
+}
+
+
