@@ -9,7 +9,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro:wght@200&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro&display=swap"
         rel="stylesheet">
     <script src="https://kit.fontawesome.com/beb6642fa2.js" crossorigin="anonymous"></script>
     <title>Cucina Gourmet</title>
@@ -35,57 +35,74 @@
     </nav>
 
     <h1 class="title-cart">Nuestra Carta</h1>
-    <hr class="cart-line">
+    <!-- <hr class="cart-line"> -->
     <main class="container-main">
         <!-- card 1 -->
         <div class="container-food">
             <div class="container-food-img">
                 <img src="https://res.cloudinary.com/dx05ruehm/image/upload/v1663797139/Proyecto%20Cac/Entradas/moritz-mentges-gAkoAJXHXdo-unsplash_xyobil.jpg"
                     alt="Entradas">
+                <div class="container-shadow">
+                    <div class="shadow-view-text">
+                        <h2 class="food-title">Entradas</h2>
+                        <hr class="line-card">
+                        <p class="view-more"><a href="#entree">Ver opciones</a></p>
+                    </div>
+                </div>
             </div>
-            <h2 class="food-title">Entradas</h2>
-            <hr class="line-card">
-            <span class="view-more">Ver opciones</span>
         </div>
         <!-- card 2 -->
         <div class="container-food border">
             <div class="container-food-img">
                 <img src="https://res.cloudinary.com/dx05ruehm/image/upload/v1663790257/Proyecto%20Cac/Carnes/tae-in-kim-jivmv9hE6bM-unsplash_exwspr.jpg"
                     alt="Platos principales">
+                <div class="container-shadow">
+                    <div class="shadow-view-text">
+                        <h2 class="food-title">Platos Principales</h2>
+                        <hr class="line-card">
+                        <p class="view-more"><a href="#principal">Ver opciones</a></p>
+                    </div>
+                </div>
             </div>
-            <h2 class="food-title">Platos principales</h2>
-            <hr class="line-card">
-            <span class="view-more">Ver opciones</span>
         </div>
         <!-- card 4 -->
         <div class="container-food">
             <div class="container-food-img">
                 <img src="https://res.cloudinary.com/dx05ruehm/image/upload/v1663794006/Proyecto%20Cac/postres/jackie-lamas-WtL39zzgkR8-unsplash_s063es.jpg"
                     alt="Postres">
+                <div class="container-shadow">
+                    <div class="shadow-view-text">
+                        <h2 class="food-title">Postres</h2>
+                        <hr class="line-card">
+                        <p class="view-more"><a href="#dessert">Ver opciones</a></p>
+                    </div>
+                </div>
             </div>
-            <h2 class="food-title">Postres</h2>
-            <hr class="line-card">
-            <span class="view-more">Ver opciones</span>
         </div>
         <!-- card 5 -->
         <div class="container-food">
             <div class="container-food-img">
                 <img src="https://res.cloudinary.com/dx05ruehm/image/upload/v1663794414/Proyecto%20Cac/Desayunos/victoria-shes-IX0Y2V2erUs-unsplash_fqlcqv.jpg"
                     alt="Brunch">
+                <div class="container-shadow">
+                    <div class="shadow-view-text">
+                        <h2 class="food-title">Brunch</h2>
+                        <hr class="line-card">
+                        <p class="view-more"><a href="#brunch">Ver opciones</a></p>
+                    </div>
+                </div>
             </div>
-            <h2 class="food-title">Brunch</h2>
-            <hr class="line-card">
-            <span class="view-more"><a href="">Ver opciones</a></span>
         </div>
     </main>
 
     <section>
-        <div>
-            <img src="" alt="Entradas">
-        </div>
-
         <div class="container-cart1">
-            <h2 class="food-title">Entradas</h2>
+            <div class="container-time-diet">
+                <p>Cualquier plato que lleve algun tipo de carne se puede reemplazar por una variante de carne vegetal
+                </p>
+                <p>{tofu, soja texturizada o medallon de legumbres con queso vegano de papa}</p>
+            </div>
+            <h2 class="food-title" id="entree">Entradas</h2>
 
             <div class="container-options">
                 <div class="title-price">
@@ -103,7 +120,7 @@
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Brochette de mar</p>
+                        <h3>Brochette de mar</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -116,42 +133,41 @@
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Empanadas</p>
+                        <h3>Empanadas</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
                     </div>
                 </div>
                 <div class="decription-food">
-                    <p>Empanadas de carne cortada a cuchillo.</p>
+                    <p>Empanadas de carne cortada a cuchillo y/o humita.</p>
                 </div>
             </div>
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Brusquetas</p>
+                        <h3>Brusquetas</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
                     </div>
                 </div>
                 <div class="decription-food">
-                    <p>Brusqueta de pan de masa madre, con mix de verdes, portobellos y queso untable con ciboulette.</p>
+                    <p>Brusqueta de pan de masa madre, con mix de verdes, portobellos y queso untable con ciboulette.
+                    </p>
                 </div>
             </div>
         </div>
         <!-- muestra de plato principal -->
-        <div>
-            <img src="" alt="Platos principales">
-        </div>
+
 
         <div class="container-cart1">
-            <h2 class="food-title">Platos Principales</h2>
+            <h2 class="food-title" id="principal">Platos Principales</h2>
 
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Ternera al malbec</p>
+                        <h3>Ternera al malbec</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -164,20 +180,20 @@
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Noquis</p>
+                        <h3>Malfatti</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
                     </div>
                 </div>
                 <div class="decription-food">
-                    <p>Noquis de calabaza con salsa filetto o salsa de crema.</p>
+                    <p>Malfatti de calabaza con salsa filetto o salsa de crema.</p>
                 </div>
             </div>
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Agnoloti maritata</p>
+                        <h3>Agnoloti maritata</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -190,7 +206,7 @@
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Verduras al curry</p>
+                        <h3>Verduras al curry</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -200,18 +216,29 @@
                     <p>Verduras de estacion asadas con daditos de tofu al curry.</p>
                 </div>
             </div>
+            <div class="container-options">
+                <div class="title-price">
+                    <div>
+                        <h3>Pizza</h3>
+                    </div>
+                    <div>
+                        <p>$3.200</p>
+                    </div>
+                </div>
+                <div class="decription-food">
+                    <p>Pizza individual estilo Napoletana con muzzarella y albahaca.</p>
+                </div>
+            </div>
         </div>
         <!-- muestra de postres -->
-        <div>
-            <img src="" alt="Postres">
-        </div>
+
         <div class="container-cart1">
-            <h2 class="food-title">Postres</h2>
+            <h2 class="food-title" id="desserts">Postres</h2>
 
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Cheesecake de estacion</p>
+                        <h3>Cheesecake de estacion</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -224,7 +251,7 @@
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Flan</p>
+                        <h3>Flan</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -237,7 +264,7 @@
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Volcan</p>
+                        <h3>Volcan</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -250,7 +277,7 @@
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Red Velvet</p>
+                        <h3>Red Velvet</h3>
                     </div>
                     <div>
                         <p>$1.200</p>
@@ -260,56 +287,68 @@
                     <p>Porcion de torta red velvet con cobertura de crema de queso y chocolate blanco.</p>
                 </div>
             </div>
-            
+
         </div>
         <!-- muestra de brunch -->
-        <div>
-            <img src="" alt="Bunch">
-        </div>
 
         <div class="container-cart1">
-            <h2 class="food-title">Brunch</h2>
+            <h2 class="food-title" id="brunch">Brunch</h2>
 
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Para compartir</p>
+                        <h3>Para compartir</h3>
                     </div>
                     <div>
                         <p>$5.200</p>
                     </div>
                 </div>
                 <div class="decription-food">
-                    <p>Dos cafe a eleccion + limonada de litro + sandwich de bagel relleno de salmon ahumado, rucula y queso sardo estacionado + french toast dulce con frutos de estacion + papas bravas al horno con salsa de queso + focaccia con aceitunas negras y tomate.</p>
+                    <p>Dos cafe a eleccion + limonada de litro + sandwich de bagel relleno de salmon ahumado, rucula y
+                        queso sardo estacionado + french toast dulce con frutos de estacion + papas bravas al horno con
+                        salsa de queso + focaccia con aceitunas negras y tomate.</p>
                 </div>
             </div>
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Dulce</p>
+                        <h3>Dulce</h3>
                     </div>
                     <div>
                         <p>$5.200</p>
                     </div>
                 </div>
                 <div class="decription-food">
-                    <p>Infusion a eleccion + vaso de jugo de naranja + lingote de torta a eleccion + muffin de frutos de estacion + french toast dulce con salsa de dulce de leche.</p>
+                    <p>Infusion a eleccion + vaso de jugo de naranja + lingote de torta a eleccion + muffin de frutos de
+                        estacion + french toast dulce con salsa de dulce de leche.</p>
                 </div>
             </div>
             <div class="container-options">
                 <div class="title-price">
                     <div>
-                        <p>Salado</p>
+                        <h3>Salado</h3>
                     </div>
                     <div>
                         <p>$5.200</p>
                     </div>
                 </div>
                 <div class="decription-food">
-                    <p>Infusion a eleccion + vaso de limonada + sandwich de bagel con queso filadelfia, rucula, tomate cherry y salmon rosado ahumado + tostado de pan baguette con lomito y queso cheddar.</p>
+                    <p>Infusion a eleccion + vaso de limonada + sandwich de bagel con queso filadelfia, rucula, tomate
+                        cherry y salmon rosado ahumado + tostado de pan baguette con lomito y queso cheddar.</p>
+                </div>
+            </div>
+            <div class="container-time-diet">
+                <div class="time">
+                    <p>Nuestro horario de atencion es de 12:00 a 15:30hs y viernes, sábados y domingos de 20:00hs a 23:30hs.</p>
+                    <p>Brunch entre las 15.30hs y 18hs, unicamente.</p>
+                </div>
+                <div class="diet">
+                    <p> Para cualquier especificacion sobre alergias y/o preferencias, informe
+                        al personal del restaurante antes de ordenar.</p>
                 </div>
             </div>
         </div>
+
     </section>
 
     <footer>
@@ -323,14 +362,14 @@
                 <p class="dir">Sucursales</p>
                 <ul>
                     <li>La Plata</li>
-                    <li>Calle 58 #1282</li>
+                    <li>Calle 58 1282</li>
                     <li>Tel: (0221) 434-4908</li>
                 </ul>
                 <br>
                 <ul>
                     <li>Capital Federal</li>
-                    <li>Una direccion</li>
-                    <li>Un telefono</li>
+                    <li>Uruguay 2390</li>
+                    <li>Tel: (011) 4754-8458</li>
                 </ul>
             </div>
 

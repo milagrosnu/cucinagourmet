@@ -55,6 +55,7 @@
     align-items: stretch;
     justify-content: space-between;
     height: 200px;
+    background-color: #FFF4F4
    /*  margin: 30vw 1vw auto 1vw */;
 }
 
@@ -63,9 +64,11 @@
     font-size: 3rem;
     color: var(--text-color);
     text-align: center;
-    width: 50%;
-    padding: 5%;
-    margin: auto;
+    /* width: 50%; */
+    width:100%;
+   /*  padding: 5%; */
+   padding-top: 80px;
+    /* margin: auto; */
 }
 
 .container-title2 {
@@ -75,18 +78,22 @@
 
 .container-info {
     font-family: var(--text-font);
-    font-size: 1.3vw;
+    font-size: 1.5vw;
     width: 33%;
     text-align: center;
+    border-right: 1px solid var(--main-color);
+    font-weight: 400;
 }
 
 .mail {
     color: var(--text-subcolor);
-
+    font-family: var(--text-font);
 }
 
 .icons {
     margin-top: 1vw;
+    font-size: 2vw;
+    color: var(--text-subcolor);
 }
 
 .container-icons {
@@ -94,6 +101,7 @@
     font-size: 1.5vw;
     width: 33%;
     justify-content: space-around;
+    padding-top: 2vw;
 }
 
 .dir {
@@ -106,14 +114,9 @@
     text-align: center;
 }
 
-.icons {
-    font-size: 40px;
-    color: var(--text-subcolor);
-}
-
 .contact {
     font-weight: bold;
-    font-family: var(--text-color);
+    font-family: var(--text-font);
 }
 
 /* SECCION CARTA */
@@ -124,12 +127,18 @@
     font-size: 3rem;
     background-color: #FFF4F4;
 }
-.cart-line{
+.title-cart:before{
+    width: 100%;
+    content: "";
+    height: 1px;
+    background-color: var(--text-subcolor);
+}
+/* .cart-line{
     background-color: var(--text-subcolor);
     width: 15rem;
     height: 1.2px;
     margin-left: 30em;
-}
+} */
 
 .container-main {
     width: 100%;
@@ -153,38 +162,77 @@
 }
 
 .line-card {
-    height:1px;
-    background-color: var(--main-color);
+    height:0.1px;
+    background-color: var(--text-color);
     width: 10rem;
-}
+    color: var(--text-color);
+    margin-left: 12.4rem;
+} 
 
  .container-food-img {
     width: 85%;
     height: auto;
     margin-top: 3vw; 
-    border-top: 1.4px solid var(--main-color);
-    border-left: 1.4px solid var(--main-color);
-    border-right: 1.4px solid var(--main-color);
-    border-bottom: 1.4px solid var(--main-color);
+    border: 1.4px solid var(--main-color);
     padding: 1vw 1vw 1vw 1vw;
+    position: relative;
+   /*  padding: 0rem 0rem 1.2rem 0rem; */
+    text-align: center;
 }
  
 .container-food-img img {
     width: 100%;
 }
+
+.container-food-img .container-shadow{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    background-color: rgba(0,0,0,0.6);
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.25s;
+}
+
+.container-food-img .container-shadow:hover{
+    opacity: 1;
+}
+.container-food-img .container-shadow > *{
+    transform: translateY(2rem);
+    transition: transform 0.25s;
+    width: 100%;
+}
+
+.container-food-img .container-shadow:hover >* {
+    transform: translateY(0rem);
+    width: 100%;
+}
+
+.container-food-img h2{
+    color:var(--text-color);
+}
+
 .food-title {
     padding: 1vw 0vw 0vw 0vw;
     /* font-weight: bolder; */
     font-family: var(--main-font);
-    font-size: 36px;
+    font-size: 45px;
 }
 
-.view-more {
-    color: var(--text-subcolor);
+.view-more a{
+    color: var(--text-color);
 }
 
 /* DESCRIPCION DE PLATOS */
-
+section{
+    background-color: #FFF4F4;
+}
 .container-options{
     background-color: var(--main-color);
     width: 90%;
@@ -199,9 +247,12 @@
 .title-price{
     display:flex;
     justify-content:space-between;
-    font-weight: bold;
-    font-size: 1.2vw;
+   font-weight: 400; 
+       /* font-size: 1.2vw; */
     border-bottom: 1px solid var(--text-color);
+}
+.title-price h3{
+    font-weight:400;
 }
 
 .container-cart1{
@@ -209,12 +260,30 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 2rem;
 }
 
-section{
-    background-color: #FFF4F4;
+.container-time-diet{
+    border: 1px solid var(--main-color);
+    font-size: 1.2vw;
+    font-family: var(--text-font);
+    width: 60%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    text-align: center;
+    padding: 1px 0px 1px 0px;
 }
 
+.time{
+    font-weight: bolder;
+    text-align: center;
+}
+
+.description-food{
+    font-weight: lighter;
+    font-size: 1vw;
+}
 /* SECCION FAQ */
 
 .container-FAQ{
