@@ -48,6 +48,35 @@
     border-left: solid 1px var(--text-color);
 }
 
+.container-chef{
+    display: flex;
+    flex-direction: row;
+    background-color: #f9d99a;
+    align-items: center;
+}
+
+.chef-title, .about-us > h1{
+    font-family: var(--main-font);
+    text-align: center;
+    font-size: 4vw;
+}
+
+.chef-text, .about-us > p{
+    font-family: var(--text-font);
+    text-align: center;
+    margin: auto 2vw auto 2vw;
+}
+
+.about-us{
+    background-color: #feeeb8;
+}
+
+.about-us > h1{
+    padding: 1vw auto 1vw;
+}
+
+
+
 /* SECCION FOOTER */
 .container-footer {
     display: flex;
@@ -78,7 +107,7 @@
 
 .container-info {
     font-family: var(--text-font);
-    font-size: 1.5vw;
+    font-size: 1.3vw;
     width: 33%;
     text-align: center;
     border-right: 1px solid var(--main-color);
