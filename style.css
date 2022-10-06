@@ -48,6 +48,7 @@
     border-left: solid 1px var(--text-color);
 }
 
+/* CARROUSEL */
 
 .slider-frame {
 	width: 100%;
@@ -89,34 +90,102 @@
 	100% {margin-left: -400%;}
 }
 
+/* CONTENIDO */
+
+.container-about-us, .container-chef{
+    padding: 2vw 2vw 0vw 0vw;
+}
+
+.about-us-flex, .place-flex{
+    display: flex;
+}
+
+.adn-text{
+    margin: 3vw 3vw 3vw 3vw;
+    font-size: 1.3vw;
+    text-align: center;
+    font-family: var(--text-font);
+}
+
+.img-place{
+    margin-top: 2vw;
+    height: 50%;
+    width: 90%;
+    border: 1.4px solid var(--main-color);
+    padding: 1vw 1vw 1vw 1vw;
+}
+
+.about-us-img{
+    height: 30%;
+    width: 40%;
+    border: 1.4px solid var(--main-color);
+    padding: 1vw 1vw 1vw 1vw;
+}
+
+.about-line{
+    background-color:  var(--text-subcolor);
+    height: 1px;
+    width: 260px;
+    margin: 0vw 3vw 1vw 40vw;
+
+}
 .container-chef{
     display: flex;
     flex-direction: row;
-    background-color: #f9d99a;
     align-items: center;
 }
 
-.chef-title, .about-us > h1{
+.chef-title, .about-title, .place-title{
     font-family: var(--main-font);
     text-align: center;
     font-size: 4vw;
 }
 
-.chef-text, .about-us > p{
+.chef-text, .container-about-us, .container-place > p{
     font-family: var(--text-font);
     text-align: center;
     margin: auto 2vw auto 2vw;
 }
 
-.about-us{
-    background-color: #feeeb8;
-}
-
-.about-us > h1{
-    padding: 1vw auto 1vw;
-}
-
-
+.button-cart{
+        display: inline-block;
+        border-radius: 4px;
+        border: 1px solid var(--text-subcolor);
+        color: var(--main-color);
+        font-family: var(--text-font);
+        font-size: 1.2vw;
+        padding: 10px;
+        width: 14vw;
+        height: 3vw;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 0.8vw 10vw;
+      }
+      
+     .button-cart span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+      }
+      
+      .button-cart span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -18px;
+        transition: 0.5s;
+      }
+      
+      .button-cart:hover span {
+        padding-right: 20px;
+      }
+      
+      .button-cart:hover span:after {
+        opacity: 1;
+        right: 0;
+      } 
 
 /* SECCION FOOTER */
 .container-footer {
