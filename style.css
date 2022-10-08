@@ -13,40 +13,142 @@
     --text-subcolor: black;
 }
 
-.container-navbar {
+/* NAV + MENU HAMBURGUESA */
+.nav-header {
+    height: 50px;
     display: flex;
-    background-color: var(--main-color);
-    color: var(--text-color);
     justify-content: space-between;
     align-items: center;
-}
-
-.title-nav {
+    background-color: var(--main-color);
+    padding: 0 0.4rem;
+  }
+  
+  .title-nav {
     font-family: var(--main-font);
-    font-size: 3vw;
+    font-size: 2.3rem;
     padding: 0.5vw 0vw 0.5vw 3vw;
+    color:var(--text-color)
 }
 
-.list-nav {
+  .main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    margin-left: -100%;
+    transition: all 0.2s linear;
+    background-color: var(--text-color);
+    z-index: 100;
+  }
+  
+  .main-nav.show {
+    margin-left: 0;
+  }
+  
+  .list-nav {
+    background-color: var(--main-color);
     display: flex;
+    flex-direction: column;
+    width: 70%;
+    height: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .link-item {
     font-family: var(--text-font);
-    padding: 0vw 0vw 0vw 5vw;
-    font-size: medium;
-    font-weight: 200px;
-}
-
-.list-nav a {
+    margin-top: 2rem;
     color: var(--text-color);
-}
-
-.nav,.nav2 {
-    padding: 0vw 3vw 0vw 3vw
-}
-
-.nav2 {
-    border-right: solid 1px var(--text-color);
-    border-left: solid 1px var(--text-color);
-}
+    text-decoration: none;
+    position: relative;
+    
+  }
+  
+  .link-item::after {
+    position: absolute;
+    content: "";
+    background-color: var(--text-color);
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    transition: 0.3s ease all;
+  }
+  
+  .link-item:hover::after {
+    width: 100%;
+  }
+  
+  .button-menu {
+    z-index: 200;
+    width: 40px;
+    height: 40px;
+    border: none;
+    display: flex;
+    background: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .button-menu span {
+    width: 37px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background: var(--text-color);
+    border-radius: 3px;
+    transform-origin: 4px 0px;
+    transition: all 0.2s linear;
+  }
+  
+  .button-menu.close span {
+    opacity: 1;
+    transform: rotate(45deg) translate(0px, 0px);
+    background: #ffffff;
+  }
+  
+  .button-menu.close span:nth-child(2) {
+    transform: rotate(-45deg) translate(-8px, 5px);
+  }
+  
+  .button-menu.close span:nth-child(3) {
+    display: none;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .button-menu {
+      display: none;
+    }
+  
+    .title-nav {
+      flex-basis: 30%;
+    }
+  
+    .main-nav {
+      position: static;
+      margin-left: 0;
+      flex-basis: 70%;
+      height: 100%;
+    }
+  
+    .list-nav {
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      background:var(--main-color);
+    }
+  
+    .link-item {
+      display: inline-block;
+      margin-top: 0;
+      margin-right: 2rem;
+    }
+  }
 
 /* CARROUSEL */
 
@@ -210,6 +312,7 @@
     grid-column: 2;
     grid-row: 5;
     padding-top: 3vw;
+    height: fit-content;
 }
 
 .chef-img > img{
@@ -218,8 +321,6 @@
     border: 1.4px solid var(--main-color);
     padding: 1vw 1vw 1vw 1vw;
 }
-/* BOTON RESERVA */
-
 
 /* SECCION FOOTER */
 .container-footer {
@@ -428,7 +529,7 @@ section{
 
 .container-time-diet{
     border: 1px solid var(--main-color);
-    font-size: 1.2vw;
+    font-size: 15px;
     font-family: var(--text-font);
     width: 60%;
     margin-top: 20px;
