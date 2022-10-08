@@ -90,102 +90,136 @@
 	100% {margin-left: -400%;}
 }
 
-/* CONTENIDO */
-
-.container-about-us, .container-chef{
-    padding: 2vw 2vw 0vw 0vw;
-}
-
-.about-us-flex, .place-flex{
-    display: flex;
-}
-
-.adn-text{
-    margin: 3vw 3vw 3vw 3vw;
-    font-size: 1.3vw;
-    text-align: center;
-    font-family: var(--text-font);
-}
-
-.img-place{
-    margin-top: 2vw;
-    height: 50%;
-    width: 90%;
-    border: 1.4px solid var(--main-color);
-    padding: 1vw 1vw 1vw 1vw;
-}
-
-.about-us-img{
-    height: 30%;
-    width: 40%;
-    border: 1.4px solid var(--main-color);
-    padding: 1vw 1vw 1vw 1vw;
-}
-
-.about-line{
-    background-color:  var(--text-subcolor);
-    height: 1px;
-    width: 260px;
-    margin: 0vw 3vw 1vw 40vw;
-
-}
-.container-chef{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+/* CONTENIDO INDEX*/
+.grid{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-column-gap: 25px;
+    padding: 0vw 0vw 0vw 4vw;
 }
 
 .chef-title, .about-title, .place-title{
     font-family: var(--main-font);
     text-align: center;
-    font-size: 4vw;
+    font-size: 2.5rem;
 }
 
-.chef-text, .container-about-us, .container-place > p{
+.chef-text, .about-text, .place-text {
     font-family: var(--text-font);
     text-align: center;
     margin: auto 2vw auto 2vw;
+    font-size: 15px;
 }
 
+ /* ABOUT US */
+.about-grid{
+    grid-column: 1 / span2;
+    padding-top: 10px;
+}
+
+.about-text{
+    margin-top: 3vw;
+    text-align: center;
+    font-family: var(--text-font);
+}
+
+/* BOTON CARTA */
 .button-cart{
-        display: inline-block;
-        border-radius: 4px;
-        border: 1px solid var(--text-subcolor);
-        color: var(--main-color);
-        font-family: var(--text-font);
-        font-size: 1.2vw;
-        padding: 10px;
-        width: 14vw;
-        height: 3vw;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 0.8vw 10vw;
-      }
-      
-     .button-cart span {
-        cursor: pointer;
-        display: inline-block;
-        position: relative;
-        transition: 0.5s;
-      }
-      
-      .button-cart span:after {
-        content: '\00bb';
-        position: absolute;
-        opacity: 0;
-        top: 0;
-        right: -18px;
-        transition: 0.5s;
-      }
-      
-      .button-cart:hover span {
-        padding-right: 20px;
-      }
-      
-      .button-cart:hover span:after {
-        opacity: 1;
-        right: 0;
-      } 
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid var(--main-color);
+    color: var(--main-color);
+    font-family: var(--text-font);
+    font-size: 15.2px;
+    padding: 10px;
+    width: 14vw;
+    height: 3vw;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0.8vw 10vw;
+  
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .button-cart:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 2; 
+    right: -10px;
+    transition: 0.2s;
+    /* margin-top: 0.3vw; */
+  }
+  
+  .button-cart:hover {
+    padding-right: 20px;
+    background-color: var(--main-color);
+    color: var(--text-color)
+  }
+  
+  .button-cart:hover:after {
+    opacity: 1;
+    right: 8px;
+    align-items: center;
+  } 
+
+.about-img{
+    grid-column: 2;
+    grid-row: 2 / span 2;
+    /* padding-left: 5vw; */
+} 
+
+.about-img > img{
+    height: 93%;
+    width: 96%;
+    border: 1.4px solid var(--main-color);
+    padding: 1vw 1vw 1vw 1vw;
+}
+
+/* PLACE */
+.place-img{
+    grid-column: 1;
+    grid-row: 3 / span 2;
+    padding: 0vw 3vw 0vw 2vw;
+}
+
+.place-img > img{
+    height: 94%;
+    width: 100%;
+    border: 1.4px solid var(--main-color);
+    padding: 1vw 1vw 1vw 1vw;
+}
+
+.place-grid{
+    grid-column: 2;
+    grid-row: 4;
+}
+
+/* CHEF */
+.chef-grid{
+    grid-column: 1;
+    grid-row: 5;
+    padding-top: 3vw;
+}
+
+.chef-img{
+    grid-column: 2;
+    grid-row: 5;
+    padding-top: 3vw;
+}
+
+.chef-img > img{
+    height: 80%;
+    width: 95%;
+    border: 1.4px solid var(--main-color);
+    padding: 1vw 1vw 1vw 1vw;
+}
+/* BOTON RESERVA */
+
 
 /* SECCION FOOTER */
 .container-footer {
@@ -217,7 +251,7 @@
 
 .container-info {
     font-family: var(--text-font);
-    font-size: 1.3vw;
+    font-size: 15px;
     width: 33%;
     text-align: center;
     border-right: 1px solid var(--main-color);
@@ -237,7 +271,7 @@
 
 .container-icons {
     text-align: center;
-    font-size: 1.5vw;
+    font-size: 15px;
     width: 33%;
     justify-content: space-around;
     padding-top: 2vw;
@@ -272,12 +306,6 @@
     height: 1px;
     background-color: var(--text-subcolor);
 }
-/* .cart-line{
-    background-color: var(--text-subcolor);
-    width: 15rem;
-    height: 1.2px;
-    margin-left: 30em;
-} */
 
 .container-main {
     width: 100%;
@@ -348,7 +376,7 @@
     width: 100%;
 }
 
-.container-food-img .container-shadow:hover >* {
+.container-food-img .container-shadow:hover > * {
     transform: translateY(0rem);
     width: 100%;
 }
@@ -358,8 +386,7 @@
 }
 
 .food-title {
-    padding: 1vw 0vw 0vw 0vw;
-    /* font-weight: bolder; */
+    padding: 0vw 0vw 0vw 0vw;
     font-family: var(--main-font);
     font-size: 45px;
 }
@@ -381,17 +408,14 @@ section{
     font-family: var(--text-font);
     color:var(--text-color);
     padding: 1vw 2vw 1vw 2vw;
+    border-radius: 5px;
 }
 
 .title-price{
     display:flex;
     justify-content:space-between;
-   font-weight: 400; 
-       /* font-size: 1.2vw; */
+   font-weight: 400;
     border-bottom: 1px solid var(--text-color);
-}
-.title-price h3{
-    font-weight:400;
 }
 
 .container-cart1{
@@ -423,15 +447,49 @@ section{
     font-weight: lighter;
     font-size: 1vw;
 }
-/* SECCION FAQ */
 
+/* SECCION FAQ */
 .container-FAQ{
     padding: 3vw 0vw 0vw 2vw;
     font-family: var(--text-font);
     text-align: center;
-    font-size: 1.7rem;
-    background-color: #FFF4F4;
-
+    font-size: 1rem;
+    background-color: var(--text-color);
 }
 
+.acordeon {
+    max-width: 70em;
+    padding: 0.5em;
+    margin-left: 22%;
+    margin-right: 22%;
+}
 
+.bloque {
+    align-items: center;
+    margin: 0 0 1em;
+    padding: 0.5em;
+    border: 1px solid var(--main-color);
+}
+
+.h3 {
+    padding: 0.1em;
+    cursor: pointer;
+    cursor: hand; 
+}
+.h3:hover{
+    background-color: var(--main-color);
+    color: var(--text-color)
+}
+
+.contenido {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    height: 0;
+    padding: 0em;
+    overflow: hidden;
+    transition: all .5s ease;
+}
+
+.bloque.activo .contenido {
+    height: auto;
+}
