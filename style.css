@@ -9,7 +9,7 @@
     --main-font: 'Great Vibes', cursive;
     --text-font: 'Source Sans Pro', sans-serif;
     --main-color: #4C0013;
-    --text-color: #FFF4F4;
+    --text-color: white;
     --text-subcolor: black;
 }
 
@@ -375,7 +375,7 @@
     align-items: stretch;
     justify-content: space-between;
     height: 200px;
-    background-color: #FFF4F4
+    background-color: var(--text-color)
         /*  margin: 30vw 1vw auto 1vw */
     ;
 }
@@ -413,7 +413,7 @@
 
 .icons {
     margin-top: 1vw;
-    font-size: 2vw;
+    font-size: 1.5rem;
     color: var(--text-subcolor);
 }
 
@@ -446,7 +446,7 @@
     font-family: var(--main-font);
     text-align: center;
     font-size: 3rem;
-    background-color: #FFF4F4;
+    background-color: var(--text-color);
 }
 
 .title-cart:before {
@@ -465,7 +465,7 @@
     font-family: var(--text-font);
     font-weight: 700;
     color: var(--text-subcolor);
-    background-color: #FFF4F4;
+    background-color: var(--text-color);
 }
 
 .container-food {
@@ -549,7 +549,7 @@
 
 /* DESCRIPCION DE PLATOS */
 section {
-    background-color: #FFF4F4;
+    background-color: var(--text-color);
 }
 
 .container-options {
@@ -661,7 +661,7 @@ section {
     font-family: var(--text-font);
     text-align: center;
     font-size: 1.7rem;
-    background-color: #FFF4F4;
+    background-color: var(--text-color);
 }
 
 .container-text {
