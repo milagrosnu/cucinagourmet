@@ -148,7 +148,13 @@
         margin-top: 0;
         margin-right: 2rem;
     }
+    
+    
+
 }
+
+
+    
 
 /* CARROUSEL */
 
@@ -380,6 +386,8 @@
     ;
 }
 
+
+
 .title {
     font-family: var(--main-font);
     font-size: 3rem;
@@ -391,6 +399,8 @@
     padding-top: 80px;
     /* margin: auto; */
 }
+
+
 
 .container-title2 {
     width: 33%;
@@ -430,8 +440,7 @@
 }
 
 .copyright {
-    background-color: var(--main-color);
-    color: var(--text-color);
+    color: black;
     text-align: center;
 }
 
@@ -439,6 +448,33 @@
     font-weight: bold;
     font-family: var(--text-font);
 }
+
+@media screen and (max-width: 768px)  {
+    
+    .container-footer{
+        flex-direction: column;
+    }
+
+    .container-footer>div{
+        width: 100%;
+        height: 100%;
+    }
+
+    footer{
+        margin: auto;   
+    }
+
+    .grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .title{
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+} 
 
 /* SECCION CARTA */
 .title-cart {
