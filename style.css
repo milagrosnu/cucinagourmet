@@ -236,17 +236,13 @@
     padding: 0vw 0vw 0vw 4vw;
 }
 
-.chef-title,
-.about-title,
-.place-title {
+.chef-title, .about-title, .place-title {
     font-family: var(--main-font);
     text-align: center;
     font-size: 2.5rem;
 }
 
-.chef-text,
-.about-text,
-.place-text {
+.chef-text, .about-text, .place-text {
     font-family: var(--text-font);
     text-align: center;
     margin: auto 2vw auto 2vw;
@@ -301,7 +297,6 @@
     top: 2;
     right: -10px;
     transition: 0.2s;
-    /* margin-top: 0.3vw; */
 }
 
 .button-cart:hover {
@@ -323,7 +318,6 @@
 .about-img {
     grid-column: 2;
     grid-row: 2 / span 2;
-    /* padding-left: 5vw; */
 }
 
 .about-img>img {
@@ -361,8 +355,7 @@
     padding-top: 3vw;
 }
 
-.chef-flex,
-.about-flex {
+.chef-flex, .about-flex {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -390,26 +383,17 @@
     align-items: stretch;
     justify-content: space-between;
     height: 200px;
-    background-color: var(--text-color)
-        /*  margin: 30vw 1vw auto 1vw */
-    ;
+    background-color: var(--text-color);
 }
-
-
 
 .title {
     font-family: var(--main-font);
     font-size: 3rem;
     color: var(--text-color);
     text-align: center;
-    /* width: 50%; */
     width: 100%;
-    /*  padding: 5%; */
     padding-top: 80px;
-    /* margin: auto; */
 }
-
-
 
 .container-title2 {
     width: 33%;
@@ -538,7 +522,6 @@
     border-radius: 20px;
     padding: 1vw 1vw 1vw 1vw;
     position: relative;
-    /*  padding: 0rem 0rem 1.2rem 0rem; */
     text-align: center;
 }
 
@@ -546,8 +529,7 @@
     width: 100%;
 }
 
-.container-food-img,
-.container-shadow {
+.container-food-img, .container-shadow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -695,7 +677,6 @@ section {
 }
 
 /* SECCION RESERVATION */
-
 .container-reservation {
     width: 100%;
     height: auto;
@@ -730,8 +711,7 @@ p.reservas-text {
     font-size: 1.2vw;
 }
 
-.container-form,
-form {
+.container-form, form {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -740,8 +720,7 @@ form {
 
 }
 
-.input-group,
-.apDes {
+.input-group, .apDes {
     background-color: #4C0013;
     font-family: var(--text-font);
     font-size: 1.5rem;
