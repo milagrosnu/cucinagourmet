@@ -76,6 +76,10 @@
     transition: 0.3s ease all;
 }
 
+.list-nav a:hover{
+    color: var(--text-color);
+}
+
 .link-item:hover::after {
     width: 100%;
 }
