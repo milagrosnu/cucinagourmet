@@ -256,7 +256,7 @@
 }
 
 .about-title {
-    padding-top: 1rem;
+    padding: 1rem 0rem 1rem 0rem;
 }
 
 .about-text {
@@ -273,8 +273,8 @@
     font-family: var(--text-font);
     font-size: 15.2px;
     padding: 10px;
-    width: 14vw;
-    height: 3vw;
+    width: 12rem;
+    height: fit-content;
     transition: all 0.5s;
     cursor: pointer;
     margin: 0.8vw 10vw;
@@ -315,6 +315,7 @@
     align-items: center;
 }
 
+/* ABOUT */
 .about-img {
     grid-column: 2;
     grid-row: 2 / span 2;
@@ -332,7 +333,7 @@
 .place-img {
     grid-column: 1;
     grid-row: 3 / span 2;
-    padding: 0vw 3vw 0vw 2vw;
+    padding: 1vw 3vw 0vw 2vw;
 }
 
 .place-img>img {
@@ -346,6 +347,7 @@
 .place-grid {
     grid-column: 2;
     grid-row: 4;
+    padding-top: 1.5vw;
 }
 
 /* CHEF */
@@ -364,7 +366,7 @@
 .chef-img {
     grid-column: 2;
     grid-row: 5;
-    padding-top: 3vw;
+    padding: 3vw 0vw 5vw 0vw;
     height: fit-content;
 }
 
@@ -406,7 +408,7 @@
     width: 33%;
     text-align: center;
     border-right: 1px solid var(--main-color);
-    font-weight: 400;
+    padding-top: 2vw;
 }
 
 .mail {
@@ -433,8 +435,9 @@
 }
 
 .copyright {
-    color: black;
+    color: var(--text-subcolor);
     text-align: center;
+    font-family: var(--text-font);
 }
 
 .contact {
@@ -457,14 +460,14 @@
         margin: auto;
     }
 
-    .grid {
-        display: flex;
-        flex-direction: column;
-    }
-
     .title {
         padding-top: 40px;
         padding-bottom: 40px;
+    }
+
+    .grid {
+        display: flex;
+        flex-direction: column;
     }
 
 }
