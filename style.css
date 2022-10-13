@@ -76,7 +76,7 @@
     transition: 0.3s ease all;
 }
 
-.list-nav a:hover{
+.list-nav a:hover {
     color: var(--text-color);
 }
 
@@ -152,13 +152,13 @@
         margin-top: 0;
         margin-right: 2rem;
     }
-    
-    
+
+
 
 }
 
 
-    
+
 
 /* CARROUSEL */
 
@@ -236,13 +236,17 @@
     padding: 0vw 0vw 0vw 4vw;
 }
 
-.chef-title, .about-title, .place-title {
+.chef-title,
+.about-title,
+.place-title {
     font-family: var(--main-font);
     text-align: center;
     font-size: 2.5rem;
 }
 
-.chef-text, .about-text, .place-text {
+.chef-text,
+.about-text,
+.place-text {
     font-family: var(--text-font);
     text-align: center;
     margin: auto 2vw auto 2vw;
@@ -357,7 +361,8 @@
     padding-top: 3vw;
 }
 
-.chef-flex, .about-flex {
+.chef-flex,
+.about-flex {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -453,32 +458,32 @@
     font-family: var(--text-font);
 }
 
-@media screen and (max-width: 768px)  {
-    
-    .container-footer{
+@media screen and (max-width: 768px) {
+
+    .container-footer {
         flex-direction: column;
     }
 
-    .container-footer>div{
+    .container-footer>div {
         width: 100%;
         height: 100%;
     }
 
-    footer{
-        margin: auto;   
+    footer {
+        margin: auto;
     }
 
-    .grid{
+    .grid {
         display: flex;
         flex-direction: column;
     }
 
-    .title{
+    .title {
         padding-top: 40px;
         padding-bottom: 40px;
     }
 
-} 
+}
 
 /* SECCION CARTA */
 .title-cart {
@@ -541,7 +546,8 @@
     width: 100%;
 }
 
-.container-food-img, .container-shadow {
+.container-food-img,
+.container-shadow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -707,7 +713,7 @@ section {
 .container-text {
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
 }
 
 h5.text-title {
@@ -724,26 +730,28 @@ p.reservas-text {
     font-size: 1.2vw;
 }
 
-.container-form, form {
+.container-form,
+form {
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     width: 100%;
     justify-content: center;
 
 }
 
-.input-group,.apDes {
+.input-group,
+.apDes {
     background-color: #4C0013;
     font-family: var(--text-font);
     font-size: 1.5rem;
     color: var(--text-color);
     padding: 2vw 1vw;
     width: 70%;
-    
+
     display: flex;
     flex-direction: row;
-    align-items:center;
+    align-items: center;
     justify-content: center;
 }
 

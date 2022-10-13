@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reservas</title>
     <link rel="stylesheet" href="./style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
     <script src="https://kit.fontawesome.com/beb6642fa2.js" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
-    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 </head>
+
 <body onload="iniciar()">
     <header class="nav-header">
         <span class="title-nav"> Cucina Gourmet </span>
@@ -39,10 +42,13 @@
         <div class="container-text">
             <div>
                 <h5 class="text-title">Procedimiento de Reservas</h5>
-                    <p class="reservas-text">Además de seleccionar número de comensales, servicio, fecha y hora, deberá facilitar los datos de contacto y realizar un PREPAGO DE $150 POR COMENSAL, que serán descontados de la factura el día de su visita.
+                <p class="reservas-text">Además de seleccionar número de comensales, servicio, fecha y hora, deberá
+                    facilitar los datos de contacto y realizar un PREPAGO DE $150 POR COMENSAL, que serán descontados de
+                    la factura el día de su visita.
                     <br><br>
-                    Para la cancelación o modificación de su reserva, comuniquese directamente con Cucina Gourmet (Datos de contacto en pie de página).
-                    </p>
+                    Para la cancelación o modificación de su reserva, comuniquese directamente con Cucina Gourmet (Datos
+                    de contacto en pie de página).
+                </p>
             </div>
         </div>
 
@@ -54,16 +60,19 @@
                         <h5 class="text-title">Servicio de Reservas</h5>
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="basic-addon1">Cantidad de Comenzales: </span>
-                            <input type="number" class="form-control" id="cantComenzales" style="text-align: center" placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
+                            <input type="number" class="form-control" id="cantComenzales" style="text-align: center"
+                                placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
                         </div><br>
 
-                        <select class="form-select" aria-label="Default select example" name="opcion" id="opcion" onchange="mostrarSelect(this)">
+                        <select class="form-select" aria-label="Default select example" name="opcion" id="opcion"
+                            onchange="mostrarSelect(this)">
                             <option disabled selected>Servicio</option>
                             <option value="Almuerzo">Almuerzo</option>
                             <option value="Cena">Cena</option>
                         </select><br><br>
 
-                        <button type="button" class="btn btn-outline-light" id="disponibilidad">Comprobar Disponibilidad</button>
+                        <button type="button" class="btn btn-outline-light" id="disponibilidad">Comprobar
+                            Disponibilidad</button>
                     </div>
 
 
@@ -73,7 +82,7 @@
                             <span class="input-group-text" id="addon-wrapping">Ingresa la fecha: </span>
                             <input type="date" name="fecha" id="fecha">
                         </div><br>
-                        
+
                         <div class="input-group mb-3">
                             <span class="input-group-text" id="addon-wrapping">Horario: </span>
                             <!--Horario almuerzo-->
@@ -89,7 +98,7 @@
                                     <option value="15:00hs">15:00hs</option>
                                 </select>
                             </div>
-                            
+
                             <!--Horario cena-->
                             <div id="horario2" style="display: none;">
                                 <select name="horario1" id="horario">
@@ -115,38 +124,44 @@
 
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">Apellido y nombre: </span>
-                                <input type="text" class="form-control" id="nombreYApellido" style="text-align: center" placeholder="John Rod" aria-label="Username" aria-describedby="basic-addon1">
+                                <input type="text" class="form-control" id="nombreYApellido" style="text-align: center"
+                                    placeholder="John Rod" aria-label="Username" aria-describedby="basic-addon1">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">DNI: </span>
-                                <input type="number" class="form-control" id="dni" style="text-align: center" placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
+                                <input type="number" class="form-control" id="dni" style="text-align: center"
+                                    placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">Teléfono de Contacto: </span>
-                                <input type="number" class="form-control" id="telefono" style="text-align: center" placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
+                                <input type="number" class="form-control" id="telefono" style="text-align: center"
+                                    placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
                             </div>
                             <div class="input-group mb-3">
                                 <span class="input-group-text" id="basic-addon1">Comentario: </span>
-                                <textarea name="message" rows="5" cols="10" style="text-align: center" class="form-control" id="comentario" aria-label="Username" aria-describedby="basic-addon1" placeholder="Comentario...">                                   
+                                <textarea name="message" rows="5" cols="10" style="text-align: center"
+                                    class="form-control" id="comentario" aria-label="Username"
+                                    aria-describedby="basic-addon1" placeholder="Comentario...">
                                 </textarea>
                             </div>
                         </form>
 
                         <button type="button" class="btn btn-outline-light" id="anterior1">Anterior</button>
-                        <button type="button" class="btn btn-outline-light" id="siguiente1" onclick="confirmaDatos()">Siguiente</button>
+                        <button type="button" class="btn btn-outline-light" id="siguiente1"
+                            onclick="confirmaDatos()">Siguiente</button>
                     </div>
 
 
                     <div id="confirmacionDatosHorario">
                         <h5 class="text-title">Confirmación de Datos</h5>
-                            <p id="parrafo1"></p>
-                            <p id="parrafo2"></p>
-                            <p id="parrafo3"></p>
-                            <p id="parrafo4"></p>
-                            <p id="parrafo5"></p>
-                            <p id="parrafo6"></p>
-                            <p id="parrafo7"></p>
-                            <p id="parrafo8"></p>
+                        <p id="parrafo1"></p>
+                        <p id="parrafo2"></p>
+                        <p id="parrafo3"></p>
+                        <p id="parrafo4"></p>
+                        <p id="parrafo5"></p>
+                        <p id="parrafo6"></p>
+                        <p id="parrafo7"></p>
+                        <p id="parrafo8"></p>
                         <button type="button" class="btn btn-outline-light" id="anterior2">Modificar Datos</button>
                         <button type="button" class="btn btn-outline-light" id="siguiente2">Confirmar Datos</button>
                     </div>
