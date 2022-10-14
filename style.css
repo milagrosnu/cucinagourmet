@@ -72,7 +72,7 @@
     bottom: -5px;
     left: 0;
     width: 0%;
-    height: 1px;
+    height: 1.2px;
     transition: 0.3s ease all;
 }
 
@@ -99,7 +99,7 @@
 
 .button-menu span {
     width: 37px;
-    height: 4px;
+    height: 2px;
     margin-bottom: 5px;
     position: relative;
     background: var(--text-color);
@@ -111,7 +111,7 @@
 .button-menu.close span {
     opacity: 1;
     transform: rotate(45deg) translate(0px, 0px);
-    background: #ffffff;
+    background: var(--main-color);
 }
 
 .button-menu.close span:nth-child(2) {
@@ -152,16 +152,9 @@
         margin-top: 0;
         margin-right: 2rem;
     }
-
-
-
 }
 
-
-
-
 /* CARROUSEL */
-
 .slider-frame {
     width: 100%;
     height: 100%;
@@ -315,7 +308,6 @@
     align-items: center;
 }
 
-/* ABOUT */
 .about-img {
     grid-column: 2;
     grid-row: 2 / span 2;
@@ -451,13 +443,19 @@
         flex-direction: column;
     }
 
-    .container-footer>div {
+    .container-footer > div {
         width: 100%;
         height: 100%;
+        border: 0;
+        text-align: center;
     }
 
     footer {
         margin: auto;
+    }
+
+    .copyright{
+        padding: 0vw 0vw 3vw 0vw;
     }
 
     .title {
@@ -466,10 +464,61 @@
     }
 
     .grid {
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 7;
+        align-items: center;
     }
 
+    .about-grid{
+        grid-column: 1;
+        grid-column: 1;
+    }
+
+    .about-title{
+        padding: 2vw 0vw 0vw 0vw;
+    }
+
+    .button-cart{
+        margin-top: 3vw;
+    }
+
+    .about-img{
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .about-text{
+        grid-column: 1;
+        grid-row: 2;
+        padding: 0rem 0rem 1.2rem 0rem;
+    }
+
+    .place-title, .chef-title{
+        margin: 1.5vw 0vw 1vw 0vw;
+    }
+
+    .place-grid{
+        grid-column: 1;
+        grid-row: 4;
+    }
+
+    .place-img{
+        grid-column: 1;
+        grid-row: 5;
+        margin-top: 3.2vw;
+    }
+
+    .chef-grid{
+        grid-column: 1;
+        grid-row: 8;
+        padding: 0;
+    }
+
+    .chef-img{
+        grid-column: 1;
+        grid-row: 9;
+    }
 }
 
 /* SECCION CARTA */
@@ -653,6 +702,7 @@ section {
     margin: 0 0 1em;
     padding: 0.5em;
     border: 1px solid var(--main-color);
+    border-radius: 4px;
 }
 
 .h3 {
@@ -686,7 +736,6 @@ section {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    font-weight: 700;
     color: var(--text-subcolor);
     font-family: var(--text-font);
     text-align: center;
@@ -710,8 +759,8 @@ h5.text-title {
 p.reservas-text {
     font-family: var(--text-font);
     text-align: center;
-    padding: 3vw;
-    font-size: 1.2vw;
+    padding: 0vw 9vw 2vw 5vw;
+    font-size: 15px;
 }
 
 .container-form, form {
@@ -724,9 +773,10 @@ p.reservas-text {
 }
 
 .input-group, .apDes {
-    background-color: #4C0013;
+    background-color: var(--main-color);
+    border-radius: 4px;
     font-family: var(--text-font);
-    font-size: 1.5rem;
+    font-size: 15px;
     color: var(--text-color);
     padding: 2vw 1vw;
     width: 70%;
