@@ -528,14 +528,14 @@
     text-align: center;
     font-size: 3rem;
     background-color: var(--text-color);
-}
+} 
 
 .title-cart:before {
     width: 100%;
     content: "";
     height: 1px;
     background-color: var(--text-subcolor);
-}
+} 
 
 .container-main {
     width: 100%;
@@ -544,7 +544,6 @@
     justify-content: center;
     flex-wrap: wrap;
     font-family: var(--text-font);
-    font-weight: 700;
     color: var(--text-subcolor);
     background-color: var(--text-color);
 }
@@ -558,7 +557,7 @@
     align-items: center;
 }
 
-.line-card {
+ .line-card {
     height: 0.1px;
     background-color: var(--text-color);
     width: 10rem;
@@ -577,11 +576,12 @@
     text-align: center;
 }
 
-.container-food-img img {
+.container-food-img > img {
     width: 100%;
+    border-radius: 20px;
 }
 
-.container-food-img, .container-shadow {
+.container-food-img .container-shadow {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -600,31 +600,34 @@
 
 .container-food-img .container-shadow:hover {
     opacity: 1;
-}
+} 
 
-.container-food-img .container-shadow>* {
+.container-food-img .container-shadow > * {
     transform: translateY(2rem);
     transition: transform 0.25s;
     width: 100%;
-}
+} 
 
-.container-food-img .container-shadow:hover>* {
+.container-food-img .container-shadow:hover > * {
     transform: translateY(0rem);
     width: 100%;
-}
-
-.container-food-img h2 {
-    color: var(--text-color);
-}
+} 
 
 .food-title {
-    padding: 0vw 0vw 0vw 0vw;
+    padding: 0;
     font-family: var(--main-font);
-    font-size: 45px;
+    color: var(--text-subcolor);
+    font-size: 3.5rem;
 }
 
-.view-more a {
+.view-more > a {
     color: var(--text-color);
+}
+
+.shadow-view-text > h2{
+    color:var(--text-color);
+    font-size: 3rem;
+    font-weight: lighter;
 }
 
 /* DESCRIPCION DE PLATOS */
@@ -647,7 +650,7 @@ section {
 .title-price {
     display: flex;
     justify-content: space-between;
-    font-weight: 400;
+    font-weight: bold;
     border-bottom: 1px solid var(--text-color);
 }
 
@@ -659,8 +662,13 @@ section {
     padding-top: 2rem;
 }
 
+.container-cart1 > h2{
+    padding-bottom: 1.2rem;
+}
+
 .container-time-diet {
     border: 1px solid var(--main-color);
+    border-radius: 6px;
     font-size: 15px;
     font-family: var(--text-font);
     width: 60%;
@@ -672,13 +680,12 @@ section {
 }
 
 .time {
-    font-weight: bolder;
+    font-weight: bold;
     text-align: center;
 }
 
 .description-food {
-    font-weight: lighter;
-    font-size: 1vw;
+    font-size: 15px;
 }
 
 /* SECCION FAQ */
