@@ -16,6 +16,7 @@
     <script src="https://kit.fontawesome.com/beb6642fa2.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 </head>
 
 <body onload="iniciar()">
@@ -54,41 +55,78 @@
 
         <div class="container-form">
             <br>
-            <form>
+            <form class="needs-validation" novalidate>
                 <div class="apDes">
-                    <div id="formulario">
+                    <div id="formularioPrincipal">
+
                         <h5 class="text-title">Servicio de Reservas</h5>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="basic-addon1">Cantidad de Comenzales: </span>
-                            <input type="number" class="form-control" id="cantComenzales" style="text-align: center"
-                                placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
+
+                        <div class="col-mb-4">
+                            <div class="input-group has-validation">
+                                <label class="input-group-text" id="inputGroupPrepend">Cantidad de Comenzales: </label>
+                                <input type="number" class="form-control" name="SelectCantComenzales" id="cantComenzales" style="text-align: center"
+                                placeholder="1" aria-label="Username" aria-describedby="inputGroupPrepend" min="1" required>
+                                <div class="invalid-feedback">
+                                    Por favor, ingrese una cantidad de comenzales válido
+                                </div>
+                                <div class="valid-feedback">
+                                    Dato Ingresado Correctamente!
+                                </div>
+                            </div>
                         </div><br>
 
-                        <select class="form-select" aria-label="Default select example" name="opcion" id="opcion"
-                            onchange="mostrarSelect(this)">
-                            <option disabled selected>Servicio</option>
-                            <option value="Almuerzo">Almuerzo</option>
-                            <option value="Cena">Cena</option>
-                        </select><br><br>
+                        <div class="col-md-3">
+                            <label for="validationCustom04" class="form-label">Seleccione: </label>
+                            <select class="form-select" aria-label="Default select example" name="opcion" id="opcion"
+                            onchange="mostrarSelect(this)" required>
+                                <option disabled selected value="">Servicio</option>
+                                <option value="Almuerzo">Almuerzo</option>
+                                <option value="Cena">Cena</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese una selección válida
+                            </div>
+                            <div class="valid-feedback">
+                                Dato Ingresado Correctamente!
+                            </div>
+                        </div>
+                        
+                        
+                        <br><br>
 
-                        <button type="button" class="btn btn-outline-light" id="disponibilidad">Comprobar
-                            Disponibilidad</button>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="submit" class="btn btn-outline-light" id="verifDatos" onclick="validarDatos()">Verificar Datos</button>
+                            <button type="button" class="btn btn-outline-light" id="disponibilidad" disabled>Comprobar Disponibilidad</button>
+                        </div>
                     </div>
 
 
+
+
+
+
+
                     <div id="disponibilidadHoraria">
+
                         <h5 class="text-title">Disponibilidad Horaria</h5>
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="addon-wrapping">Ingresa la fecha: </span>
-                            <input type="date" name="fecha" id="fecha">
+
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">Ingresa la fecha: </label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" required>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese una fecha válida
+                            </div>
+                            <div class="valid-feedback">
+                                Dato Ingresado Correctamente!
+                            </div>
                         </div><br>
 
-                        <div class="input-group mb-3">
-                            <span class="input-group-text" id="addon-wrapping">Horario: </span>
+                        <div class="col-md-3">
+                            <label for="validationCustom04" class="form-label">Horario: </label>
                             <!--Horario almuerzo-->
                             <div id="horario1" style="display: none;">
-                                <select name="horario1" id="horario">
-                                    <option disabled selected>Horario</option>
+                                <select class="form-select" aria-label="Default select example" name="horario1" id="horario" required>
+                                    <option disabled selected value="">Horario</option>
                                     <option value="12:00hs">12:00hs</option>
                                     <option value="12:30hs">12:30hs</option>
                                     <option value="13:00hs">13:00hs</option>
@@ -101,8 +139,8 @@
 
                             <!--Horario cena-->
                             <div id="horario2" style="display: none;">
-                                <select name="horario1" id="horario">
-                                    <option disabled selected>Horario</option>
+                                <select class="form-select" aria-label="Default select example" name="horario1" id="horario" required>
+                                    <option disabled selected value="">Horario</option>
                                     <option value="20:00hs">20:00hs</option>
                                     <option value="20:30hs">20:30hs</option>
                                     <option value="21:00hs">21:00hs</option>
@@ -112,44 +150,92 @@
                                     <option value="23:00hs">23:00hs</option>
                                 </select>
                             </div>
+                            <div class="invalid-feedback">
+                                Por favor, ingrese una selección válida
+                            </div>
+                            <div class="valid-feedback">
+                                Dato Ingresado Correctamente!
+                            </div>
                         </div><br><br>
 
-                        <button type="button" class="btn btn-outline-light" id="anterior">Anterior</button>
-                        <button type="button" class="btn btn-outline-light" id="siguiente">Siguiente</button>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-light" id="anterior">Anterior</button>
+                            <button type="submit" class="btn btn-outline-light" id="verifDatos1" onclick="validarDatos1()">Verificar Datos</button>
+                            <button type="button" class="btn btn-outline-light" id="siguiente" disabled>Siguiente</button>
+                        </div>
                     </div>
+
+
+
+
 
                     <div id="datosContacto">
                         <form>
                             <h5 class="text-title">Datos de Contacto</h5>
 
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">Apellido y nombre: </span>
-                                <input type="text" class="form-control" id="nombreYApellido" style="text-align: center"
-                                    placeholder="John Rod" aria-label="Username" aria-describedby="basic-addon1">
+                            <div class="col-mb-4">
+                                <div class="input-group has-validation">
+                                    <label class="input-group-text" id="inputGroupPrepend">Apellido y nombre: </label>
+                                    <input type="text" class="form-control" name="nombreYApellido" id="nombreYApellido" style="text-align: center"
+                                    placeholder="John Rod" aria-label="Username" aria-describedby="inputGroupPrepend" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese un nombre y apellido válido
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Dato Ingresado Correctamente!
+                                    </div>
+                                </div>
                             </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">DNI: </span>
-                                <input type="number" class="form-control" id="dni" style="text-align: center"
-                                    placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
+
+                            <div class="col-mb-4">
+                                <div class="input-group has-validation">
+                                    <label class="input-group-text" id="inputGroupPrepend">DNI: </label>
+                                    <input type="number" class="form-control" name="dni" id="dni" style="text-align: center"
+                                    placeholder="1" aria-label="Username" aria-describedby="inputGroupPrepend" min="1" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese un DNI válido
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Dato ingresado correctamente!
+                                    </div>
+                                </div>
                             </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">Teléfono de Contacto: </span>
-                                <input type="number" class="form-control" id="telefono" style="text-align: center"
-                                    placeholder="1" aria-label="Username" aria-describedby="basic-addon1" min="1">
+
+                            <div class="col-mb-4">
+                                <div class="input-group has-validation">
+                                    <label class="input-group-text" id="inputGroupPrepend">Teléfono de Contacto: </label>
+                                    <input type="number" class="form-control" name="telefono" id="telefono" style="text-align: center"
+                                    placeholder="1" aria-label="Username" aria-describedby="inputGroupPrepend" min="1" required>
+                                    <div class="invalid-feedback">
+                                        Por favor, ingrese un telefono válido
+                                    </div>
+                                    <div class="valid-feedback">
+                                        Dato ingresado correctamente!
+                                    </div>
+                                </div>
                             </div>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text" id="basic-addon1">Comentario: </span>
-                                <textarea name="message" rows="5" cols="10" style="text-align: center"
-                                    class="form-control" id="comentario" aria-label="Username"
-                                    aria-describedby="basic-addon1" placeholder="Comentario...">
-                                </textarea>
+
+                            <div class="mb-3">
+                                <label for="validationTextarea" class="form-label">Comentario: </label>
+                                <textarea class="form-control" id="comentario" aria-label="Username" style="text-align: center" name="message" rows="5" cols="10" aria-describedby="basic-addon1" placeholder="Comentario..." required></textarea>
+                                <div class="invalid-feedback">
+                                    Por favor, ingrese un comentario válido
+                                </div>
+                                <div class="valid-feedback">
+                                    Dato ingresado correctamente!
+                                </div>
                             </div>
+
                         </form>
 
-                        <button type="button" class="btn btn-outline-light" id="anterior1">Anterior</button>
-                        <button type="button" class="btn btn-outline-light" id="siguiente1"
-                            onclick="confirmaDatos()">Siguiente</button>
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-light" id="anterior1">Anterior</button>
+                            <button type="submit" class="btn btn-outline-light" id="verifDatos2" onclick="validarDatos2()">Verificar Datos</button>
+                            <button type="button" class="btn btn-outline-light" id="siguiente1" onclick="confirmaDatos()" disabled>Siguiente</button>
+                        </div>
                     </div>
+
+
 
 
                     <div id="confirmacionDatosHorario">
@@ -162,8 +248,11 @@
                         <p id="parrafo6"></p>
                         <p id="parrafo7"></p>
                         <p id="parrafo8"></p>
-                        <button type="button" class="btn btn-outline-light" id="anterior2">Modificar Datos</button>
-                        <button type="button" class="btn btn-outline-light" id="siguiente2">Confirmar Datos</button>
+
+                        <div class="btn-group" role="group" aria-label="Basic outlined example">
+                            <button type="button" class="btn btn-outline-light" id="anterior2">Modificar Datos</button>
+                            <button type="button" class="btn btn-outline-light" id="siguiente2">Confirmar Datos</button>
+                        </div>
                     </div>
                 </div>
             </form>
@@ -197,12 +286,10 @@
 
             <div class="container-icons">
                 <ul>
+                    <li class="contact">Trabaja con nosotros!</li>
                     <li class="contact">Contacto general</li>
                     <a class="mail" href="mailto:cucinagourmet@gmail.com">cucinagourmet@gmail.com</a>
                 </ul>
-                <!-- <div class="aviso">Aviso legal<br>
-                    <!-- <span class="aviso texto">Las empresas aquí mencionadas no tienen relación jurídica ni económica -ni entre sí ni respecto de otra sociedad o individuo alguno más allá de la coordinación de esfuerzos y estrategias de marketing que aquí se exponen.</span>
-                    </div><br>!-->
                 <div class="icons">
                     <a href="https://facebook.com/" target="_blank">
                         <i class="fa-brands fa-facebook icons"></i>
@@ -218,8 +305,6 @@
                 <div class="copyright">Copyright @ 2022</div>
             </div>
         </div>
-
-
     </footer>
 
     <script src="reservas.js"></script>

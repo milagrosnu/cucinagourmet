@@ -1,7 +1,9 @@
-/*const Clickbutton = document.querySelectorAll('.button');*/
+var btn_verificar = document.getElementById('verifDatos');
+var btnVerifDatos = document.getElementById('verifDatos1');
+var btnVerifDatos1 = document.getElementById('verifDatos2');
 
 function iniciar(){
-	var bloqueFormulario= document.getElementById("formulario");
+	var bloqueFormulario= document.getElementById("formularioPrincipal");
     var bloqueDisponibilidadHoraria = document.getElementById("disponibilidadHoraria");
     var bloqueConfirmacion = document.getElementById("confirmacionDatosHorario");
     var bloqueDatosContactos = document.getElementById("datosContacto");
@@ -36,6 +38,7 @@ function iniciar(){
         bloqueDisponibilidadHoraria.style.display="none";
         bloqueDatosContactos.style.display="none";
         bloqueConfirmacion.style.display="none";  
+        btn_verificar.style='display:block';
 	});
     //Me lleva a DatosContacto
     btnSiguiente.addEventListener('click',function(){
@@ -50,6 +53,8 @@ function iniciar(){
         bloqueDisponibilidadHoraria.style.display="";
         bloqueDatosContactos.style.display="none";
         bloqueConfirmacion.style.display="none";
+        btn_verificar.style='display:block';
+        btnVerifDatos.style='display:block';
 	});
     //Me lleva a confirmacion
     btnSiguiente1.addEventListener('click',function(){
@@ -63,7 +68,10 @@ function iniciar(){
 		bloqueFormulario.style.display="none";
         bloqueDisponibilidadHoraria.style.display="none";
         bloqueDatosContactos.style.display="";
-        bloqueConfirmacion.style.display="none";  
+        bloqueConfirmacion.style.display="none";
+        btn_verificar.style='display:block';
+        btnVerifDatos.style='display:block';
+        btnVerifDatos1.style='display:block';
 	});
     //Bloque vacio
     btnSiguiente2.addEventListener('click',function(){
@@ -123,6 +131,96 @@ function confirmaDatos() {
 
 }
 
-/*Clickbutton.forEach(btn => {
-  btn.addEventListener('click', addToArrayItem)
-})*/
+/*VALIDACION DE FORMULARIO*/
+(() => {
+    'use strict'
+  
+    const forms = document.querySelectorAll('.needs-validation')
+  
+    Array.from(forms).forEach(form => {
+      form.addEventListener('submit', event => {
+        if (!form.checkValidity()) {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+  
+        form.classList.add('was-validated')
+      }, false)
+
+
+    })
+
+})()
+
+function validarDatos() {
+    let comenzales = document.getElementById('cantComenzales').value;
+    let opcionSelect = document.getElementById('opcion').options.selectedIndex;
+    let btn_disponibilidad = document.getElementById('disponibilidad');
+    
+
+    //console.log(comenzales); // Debe ser mayor a 0
+    //console.log(opcionSelect); // la opcion por defecto es 0 si no elige nada, si elige otra opcion toma el valor 1 o 2 dependiendo lo que elija 
+
+    // Si ambos son mayor a 0 activa el boton y oculta el anterior
+    if(comenzales > 0 && opcionSelect > 0) {
+        btn_disponibilidad.disabled=false;
+        btn_verificar.style='display:none';
+    }
+}
+
+function validarDatos1() {
+    var fecha = document.getElementById("fecha").value;
+    var horario = document.getElementById("horario").options.selectedIndex;
+    let siguiente = document.getElementById("siguiente");
+
+    val = 0;
+
+    if(fecha == "") {
+        val++;
+    }
+
+    console.log(val); // val = 1 si no hay seleccion.
+                        // val = 0 si hay seleccion.
+    //console.log(horario); // la opcion por defecto es 0 si no elige nada, si elige otra opcion toma el valor 1 o 2 dependiendo lo que elija 
+
+    if(val == 0 && horario > 0) {
+        siguiente.disabled=false;
+        btnVerifDatos.style='display:none';
+    }
+}
+
+function validarDatos2() {
+    var nombreYApellido = document.getElementById("nombreYApellido").value;
+    var dni = document.getElementById("dni").value;
+    var telefono = document.getElementById("telefono").value;
+    var comentario = document.getElementById("comentario").value;
+    let siguiente1 = document.getElementById("siguiente1");
+
+    val1 = 0;
+    valDni = 0;
+    valTel = 0;
+    valCom = 0;
+
+    if(nombreYApellido == "") {
+        val1++;
+    }
+    if(dni == "") {
+        valDni++;
+    }
+    if(telefono == "") {
+        valTel++;
+    }
+    if(comentario == "") {
+        valCom++;
+    }
+
+    console.log(val1);
+    console.log(valDni);
+    console.log(valTel);
+    console.log(valCom);
+
+    if(val == 0 && valDni == 0 && valTel == 0 && valCom == 0) {
+        siguiente1.disabled=false;
+        btnVerifDatos1.style='display:none';
+    }
+}
