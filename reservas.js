@@ -118,6 +118,7 @@ function confirmaDatos() {
     var nombreYApellido = document.getElementById("nombreYApellido").value;
     var dni = document.getElementById("dni").value;
     var telefono = document.getElementById("telefono").value;
+    var email = document.getElementById("email").value;
     var comentario = document.getElementById("comentario").value;
 
     document.getElementById("parrafo1").innerHTML = "Cantidad de Comenzales: " +cantComenzales;
@@ -127,7 +128,8 @@ function confirmaDatos() {
     document.getElementById("parrafo5").innerHTML = "Apellido y Nombre: " +nombreYApellido;
     document.getElementById("parrafo6").innerHTML = "DNI: " +dni;
     document.getElementById("parrafo7").innerHTML = "Teléfono de Contacto: " +telefono;
-    document.getElementById("parrafo8").innerHTML = "Comentario: " +comentario;
+    document.getElementById("parrafo8").innerHTML = "E-mail: " +email;
+    document.getElementById("parrafo9").innerHTML = "Comentario: " +comentario;
 
 }
 
@@ -179,7 +181,7 @@ function validarDatos1() {
         val++;
     }
 
-    console.log(val); // val = 1 si no hay seleccion.
+    //console.log(val); // val = 1 si no hay seleccion.
                         // val = 0 si hay seleccion.
     //console.log(horario); // la opcion por defecto es 0 si no elige nada, si elige otra opcion toma el valor 1 o 2 dependiendo lo que elija 
 
@@ -193,6 +195,7 @@ function validarDatos2() {
     var nombreYApellido = document.getElementById("nombreYApellido").value;
     var dni = document.getElementById("dni").value;
     var telefono = document.getElementById("telefono").value;
+    var email = document.getElementById("email").value;
     var comentario = document.getElementById("comentario").value;
     let siguiente1 = document.getElementById("siguiente1");
 
@@ -200,6 +203,7 @@ function validarDatos2() {
     valDni = 0;
     valTel = 0;
     valCom = 0;
+    valEm = 0;
 
     if(nombreYApellido == "") {
         val1++;
@@ -210,16 +214,20 @@ function validarDatos2() {
     if(telefono == "") {
         valTel++;
     }
+    if(email == "") {
+        valEm++;
+    }
     if(comentario == "") {
         valCom++;
     }
 
-    console.log(val1);
+    /*console.log(val1);
     console.log(valDni);
     console.log(valTel);
-    console.log(valCom);
+    console.log(valEm);
+    console.log(valCom);*/
 
-    if(val == 0 && valDni == 0 && valTel == 0 && valCom == 0) {
+    if(val1 == 0 && valDni == 0 && valTel == 0 && valEm == 0 && valCom == 0) {
         siguiente1.disabled=false;
         btnVerifDatos1.style='display:none';
     }
