@@ -30,7 +30,7 @@ const toggleButton = document.getElementById("button-menu");
 const navWrapper = document.getElementById("nav");
 
 /* 
-  cada ves que se haga click en el botón 
+  cada vez que se haga clic en el botón 
   agrega y quita las clases necesarias 
   para que el menú se muestre.
 */
