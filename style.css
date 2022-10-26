@@ -882,3 +882,69 @@ section {
         height: auto;
       }
   }
+  
+/* SECCION RESERVATION */
+.container-reservation {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    color: var(--text-subcolor);
+    font-family: var(--text-font);
+    text-align: center;
+    font-size: 1.7rem;
+    background-color: var(--text-color);
+}
+
+.container-text {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+h5.text-title {
+    font-family: var(--main-font);
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 1vw;
+}
+
+p.reservas-text {
+    font-family: var(--text-font);
+    text-align: center;
+    padding: 0vw 9vw 2vw 5vw;
+    font-size: 15px;
+}
+
+.container-form, form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+
+}
+
+.input-group, .apDes {
+    background-color: var(--main-color);
+    border-radius: 4px;
+    font-family: var(--text-font);
+    font-size: 15px;
+    color: var(--text-color);
+    padding: 2vw 1vw;
+    width: 70%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-cart {
+    text-align: center;
+}
+
+.apDes{
+    margin-bottom: 2vw;
+}
