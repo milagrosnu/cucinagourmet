@@ -731,111 +731,154 @@ section {
 }
 
 /* SECCION FAQ */
-.container-FAQ {
-    padding: 3vw 0vw 0vw 2vw;
-    font-family: var(--text-font);
-    text-align: center;
-    font-size: 1rem;
-    background-color: var(--text-color);
-}
+@media (width >= 320px) {
+    .container-FAQ {
+      padding: 3vw 0vw 0vw 2vw;
+      font-family: var(--text-font);
+      text-align: center;
+      font-size: 1rem;
+      background-color: var(--text-color);
+    }
+  
+    .acordeon {
+      max-width: 70em;
+      padding: 0.5em; 
+    }
+  
+    .bloque {
+      align-items: center;
+      margin: 0 0 1em;
+      padding: 0.5em;
+      border: 1px solid var(--main-color);
+      border-radius: 4px;
+    }
+  
+    .h3 {
+      font-size: 15px;
+      padding: 0.1em;
+      cursor: pointer;
+      cursor: hand;
+    }
+  
+    .h3:hover {
+      background-color: var(--main-color);
+      color: var(--text-color);
+    }
+  
+    .contenido {
+      background-color: var(--main-color);
+      color: var(--text-color);
+      height: 0;
+      padding: 0em;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+    .contenido p{
+      font-size: 12px;
+    }
+  
+    .bloque.activo .contenido {
+      height: auto;
+    }
+  }
+   @media (width >= 525px) {
+    .container-FAQ {
+      padding: 3vw 0vw 0vw 2vw;
+      font-family: var(--text-font);
+      text-align: center;
+      font-size: 1rem;
+      background-color: var(--text-color);
+    }
+  
+    .acordeon {
+      max-width: 70em;
+      padding: 0.5em;
+      margin-left: 22%;
+      margin-right: 22%;
+    }
+  
+    .bloque {
+      align-items: center;
+      margin: 0 0 1em;
+      padding: 0.5em;
+      border: 1px solid var(--main-color);
+      border-radius: 4px;
+    }
+  
+    .h3 {
+      padding: 0.1em;
+      cursor: pointer;
+      cursor: hand;
+    }
+  
+    .h3:hover {
+      background-color: var(--main-color);
+      color: var(--text-color);
+    }
+  
+    .contenido {
+      background-color: var(--main-color);
+      color: var(--text-color);
+      height: 0;
+      padding: 0em;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+  
+    .bloque.activo .contenido {
+      height: auto;
+    }
+  }
 
-.acordeon {
-    max-width: 70em;
-    padding: 0.5em;
-    margin-left: 22%;
-    margin-right: 22%;
-}
+  @media (width >= 768px) {
+    .container-FAQ {
+        padding: 3vw 0vw 0vw 2vw;
+        font-family: var(--text-font);
+        text-align: center;
+        font-size: 15px;
+        background-color: var(--text-color);
+      }
 
-.bloque {
-    align-items: center;
-    margin: 0 0 1em;
-    padding: 0.5em;
-    border: 1px solid var(--main-color);
-    border-radius: 4px;
-}
+      .acordeon {
+        max-width: 70em;
+        padding: 0.5em;
+        margin-left: 10%;
+        margin-right: 10%;
+      }
+    
+      .bloque {
+        align-items: center;
+        margin: 0 0 1em;
+        padding: 1em;
+        border: 1px solid var(--main-color);
+        border-radius: 4px;
+      }
+    
+      .h3 {
+        padding: 0.1em;
+        cursor: pointer;
+        cursor: hand;
+      }
+    
+      .h3:hover {
+        background-color: var(--main-color);
+        color: var(--text-color);
+      }
+    
+      .contenido {
+        background-color: var(--main-color);
+        color: var(--text-color);
+        height: 0;
+        padding: 0em;
+        overflow: hidden;     
+        transition: all 0.5s ease;
+      }
 
-.h3 {
-    padding: 0.1em;
-    cursor: pointer;
-    cursor: hand;
-}
-
-.h3:hover {
-    background-color: var(--main-color);
-    color: var(--text-color)
-}
-
-.contenido {
-    background-color: var(--main-color);
-    color: var(--text-color);
-    height: 0;
-    padding: 0em;
-    overflow: hidden;
-    transition: all .5s ease;
-}
-
-.bloque.activo .contenido {
-    height: auto;
-}
-
-/* SECCION RESERVATION */
-.container-reservation {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    color: var(--text-subcolor);
-    font-family: var(--text-font);
-    text-align: center;
-    font-size: 1.7rem;
-    background-color: var(--text-color);
-}
-
-.container-text {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-h5.text-title {
-    font-family: var(--main-font);
-    text-align: center;
-    font-size: 2.5rem;
-    padding: 1vw;
-}
-
-p.reservas-text {
-    font-family: var(--text-font);
-    text-align: center;
-    padding: 0vw 9vw 2vw 5vw;
-    font-size: 15px;
-}
-
-.container-form, form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-    justify-content: center;
-
-}
-
-.input-group, .apDes {
-    background-color: var(--main-color);
-    border-radius: 4px;
-    font-family: var(--text-font);
-    font-size: 15px;
-    color: var(--text-color);
-    padding: 2vw 1vw;
-    width: 70%;
-
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-
-.title-cart {
-    text-align: center;
-}
+      .contenido > p{
+        font-size: 15px;
+      }
+    
+      .bloque.activo .contenido {
+        height: auto;
+      }
+  }

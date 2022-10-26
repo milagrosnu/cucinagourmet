@@ -81,8 +81,6 @@ function iniciar(){
         bloqueDatosContactos.style.display="none";
         bloqueConfirmacion.style.display="none";
 	});
-
-
 }
 
 //Horario dependiendo de seleccion si es almuerzo o cena
