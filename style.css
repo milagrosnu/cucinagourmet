@@ -781,7 +781,7 @@ section {
       height: auto;
     }
   }
-   @media (width > 320px) {
+   @media (width > 320px) and (width < 768px) {
     .container-FAQ {
       padding: 3vw 0vw 0vw 2vw;
       font-family: var(--text-font);
@@ -793,8 +793,8 @@ section {
     .acordeon {
       max-width: 70em;
       padding: 0.5em;
-      margin-left: 22%;
-      margin-right: 22%;
+      margin-left: 10%;
+      margin-right: 10%;
     }
   
     .bloque {
