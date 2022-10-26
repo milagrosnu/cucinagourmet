@@ -731,7 +731,7 @@ section {
 }
 
 /* SECCION FAQ */
-@media (width >= 320px) {
+@media (width <= 320px) {
     .container-FAQ {
       padding: 3vw 0vw 0vw 2vw;
       font-family: var(--text-font);
@@ -781,7 +781,7 @@ section {
       height: auto;
     }
   }
-   @media (width >= 525px) {
+   @media (width > 320px) {
     .container-FAQ {
       padding: 3vw 0vw 0vw 2vw;
       font-family: var(--text-font);
